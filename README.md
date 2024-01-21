@@ -1,1 +1,2 @@
-shell basics
+#i/bin/bash
+echo "shell basics"
