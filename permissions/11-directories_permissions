@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo find . -type d -exec chmod ugo=+x {} +
+find . -type f -exec cat -n 1-13 > file.txt
