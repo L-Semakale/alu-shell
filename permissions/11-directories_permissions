@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod ago+X .
+chmod ugo a+X .
