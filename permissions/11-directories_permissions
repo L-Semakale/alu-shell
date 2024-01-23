@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -type d -exec cat -n 1-13 | grep -w "rw-r--r--" > file.txt
+chmod -R +X .
