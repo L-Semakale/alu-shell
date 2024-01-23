@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -exec cat -n 1-13 > file.txt
+find . -type f -exec cat -n 1-13 | grep -w "rw-r--r--" > file.txt
