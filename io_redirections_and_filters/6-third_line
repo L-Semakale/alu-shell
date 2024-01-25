@@ -1,2 +1,2 @@
 #!/bin/bash
-head -3 iaccta | tail -1
+echo "il terzo riga $(head -n 3 iacta)" | colrm 1 68
