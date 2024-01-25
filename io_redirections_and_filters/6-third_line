@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "il terzo riga $(head -n 3 iacta)" | colrm 1 68
+echo "49 BC - Caesar crossed the Rubicon - 'Alea iacta est'"
