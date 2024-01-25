@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "49 BC - Caesar crossed the Rubicon - 'Alea iacta est'"
+:let i=0|while i<3|let i=i+1|execute "normal " . i . "gg"|endwhile|redir @a|execute "normal! Gdd"|redir end|execute "put=getreg('a',1,1)"
