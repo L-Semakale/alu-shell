@@ -3,13 +3,13 @@
 
 #On the 9th 9th iteration, displays Best School and then Hi on a new line
 
-count="0"
+count=0
 
 while [ $count -lt 10 ]
       if [ $count -eq 9 ]
         echo "Hi"
 
-      fi 
+then 
        echo "Best School"
-          (( count++))
+          (( count++ ))
 done
