@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#displays tge content of the file /etc/passwd with story
+while IFS= read -r contents
+do
+   user=$(echo "Scontents" | cut -f 1 -d ':')
+   pass=$(echo "Scontents" | cut -f 2 -d ':')
+   vid=$(echo "Scontents" | cut -f 3 -d ':')
+   gid=$(echo "Scontents" |cut -f 4 -d ':')
+   u_info=$(echo "Scontents" | cut -f 5 -d ':')
+   home=$(echo "Scontents" | cut -f 6 -d ':')
+   commands=$(echo "Scontents" | cut -f 7 -d ':')
+
+   echo -n "The user $user is  is part of the $gid gang, "
+   echo -n "lives in $home and rides $command ."
+   echo -n " $uid's place is protected by the passcode $pass, "
+   echo "more info about the user here: $u_info"
+done < "/etc/passwd    
