@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#displays tge content of the file /etc/passwd with story
+#displays the content of the file /etc/passwd with story
 while IFS= read -r contents
 do
    user=$(echo "Scontents" | cut -f 1 -d ':')
