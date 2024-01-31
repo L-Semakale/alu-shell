@@ -14,6 +14,6 @@ do
                "9") echo "bad luck from japan";;
                "17") echo "bad luck from italy";;
          esac
-	 echo "anything" >&1
+	 echo "anything" >stderr
 	 (( count++ ))
 done
