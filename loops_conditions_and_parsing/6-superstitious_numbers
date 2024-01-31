@@ -10,9 +10,10 @@ while [ $count -le 20 ]
 do 
          echo "$count"
          case $count in
-               "4") echo "bad luck from china" >&2;;
-               "9") echo "bad luck from japan" >&2;;
-               "17") echo "bad luck from italy" >&2;;
+               "4") echo "bad luck from china";;
+               "9") echo "bad luck from japan";;
+               "17") echo "bad luck from italy";;
          esac
+	 echo "anything" >&2
 	 (( count++ ))
 done
