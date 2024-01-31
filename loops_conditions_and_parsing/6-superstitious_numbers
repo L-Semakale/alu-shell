@@ -14,6 +14,5 @@ do
                "9") echo "bad luck from japan";;
                "17") echo "bad luck from italy";;
          esac
-	 [ "$Anything" ]
 	 (( count++ ))
 done
