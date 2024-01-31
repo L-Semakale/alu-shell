@@ -1,18 +1,27 @@
 #!/usr/bin/env bash
-#displaying numbers from 1 to 20
-#displaying "bad luck from china" for the 4th iteration
-#displaying "bad luck from japan" for the 9th iteration
-#displaying "bad luck from italy" for the 17th iteration
+#using thew while loop and case loop to list first 20 numbers
 
-count=1
+number=1
 
-while [ $count -le 20 ]
-do 
-         echo "$count"
-         case $count in
-               "4") echo "bad luck from china";;
-               "9") echo "bad luck from japan";;
-               "17") echo "bad luck from italy";;
-         esac
-	 (( count++ ))
+while [ $number -le 20 ]
+do
+	case $number in
+		
+		4)
+			echo "$number"
+			echo "bad luck from China"
+		  ;;
+		9)
+			echo "$number"
+			echo "bad luck from Japan"
+		  ;;
+		17)
+			echo "$number"
+			echo "bad luck from Italy"
+		  ;;
+
+		*)
+		  echo "$number"
+		  ;;
+esac
 done
