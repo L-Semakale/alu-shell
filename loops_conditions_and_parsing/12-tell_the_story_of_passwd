@@ -2,6 +2,7 @@
 #displays the content of the file /etc/passwd with story
 while IFS= read -r contents
 do
+
    user=$(echo "Scontents" | cut -f 1 -d ':')
    pass=$(echo "Scontents" | cut -f 2 -d ':')
    uid=$(echo "Scontents" | cut -f 3 -d ':')
