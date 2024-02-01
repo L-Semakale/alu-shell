@@ -1,28 +1,29 @@
 #!/usr/bin/env bash
 #using thew while loop and case loop to list first 20 numbers
 
-number=1
+counter=1
 
-while [ $number -le 20 ]
+while [ $counter -le 20 ]
 do
-	case $number in
+	case $counter in
 		
 		4)
-			echo "$number"
+			echo "4"
 			echo "bad luck from China"
 		  ;;
 		9)
-			echo "$number"
+			echo "9"
 			echo "bad luck from Japan"
 		  ;;
 		17)
-			echo "$number"
+			echo "17"
 			echo "bad luck from Italy"
 		  ;;
 
 		*)
-		  echo "$number"
-		  (($number++))
+		  echo $counter
 		  ;;
-esac
+                 esac
+		  (( counter++ ))
+		  
 done
