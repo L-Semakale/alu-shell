@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-#Displaying a list of currently running processes
+#Displaying a list of currently running process
+# show all processes, for all users, including those which might not have a TTY
+#Display in a user-oriented format
+#Show process hierarchy
 
-echo "USER       PID  PPID  CMD"
-
-ps -e --forest | awk '{printf "%-10s %5s %5s %s\n", $1, $4, $5, $NF}' 
+ps -a -x -u -f 
 
