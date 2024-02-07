@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
-#List processes
-ps -ef
+#Displaying a list of currently running processes
+
+echo "USER       PID  PPID  CMD"
+
+ps -e --forest | awk '{printf "%-10s %5s %5s %s\n", $1, $4, $5, $NF}'
+
+done 
 
