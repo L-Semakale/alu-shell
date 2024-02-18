@@ -1,35 +1,12 @@
 #!/usr/bin/env bash
-# Function to handle SIGTERM and SIGQUIT signals
-cleanup() {
-    echo "Deleting PID file and terminating script"
-    rm /var/run/myscript.pid
-    exit 0
+#signal
+clean_up() {
+    rm -f /var/run/myscript.pid
+    exit $?
 }
 
-# Trap signals SIGTERM and SIGQUIT to call cleanup function
-trap cleanup SIGTERM SIGQUIT
+# Register clean_up function to trap signals
+trap 'clean_up' SIGTERM SIGQUIT
 
-# Function to handle SIGINT signal
-interrupt() {
-    echo "Y U no love me?!"
-}
-
-# Trap signal SIGINT to call interrupt function
-trap interrupt SIGINT
-
-# Function to handle SIGTERM signal
-terminate() {
-    echo "I hate the kill command"
-}
-
-# Trap signal SIGTERM to call terminate function
-trap terminate SIGTERM
-
-# Create PID file
-echo $$ > /var/run/myscript.pid
-
-# Loop indefinitely
-while true; do
-    echo "To infinity and beyond"
-    sleep 1
-done
+# Store the PID of this script
+echo $$ > "/var/run/myscript.pid"
