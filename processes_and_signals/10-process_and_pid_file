@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Function to handle signals
 signal_handler() {
     case $1 in
